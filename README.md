@@ -5,18 +5,16 @@ A clean, professional CV/Resume template in LaTeX with both English and Chinese 
 ## Features
 
 - Separate English and Chinese versions
-- Clean black and white design
 - Professional layout
 - Custom class file for consistent styling
-- Profile photo support (Chinese version)
+- Profile photo support
 
 ## Structure
 
-- `resume.cls`: Common class file for both versions
-- `resume_en.tex`: English CV template
-- `resume_zh.tex`: Chinese CV template
+- `style.sty`: Common class file for both versions
+- `cv_chinese.tex`: English CV template
+- `cv_english.tex`: Chinese CV template
 - `images/`: Directory for profile photo
-- `fonts/`: Directory for Chinese fonts
 
 ## Usage
 
@@ -24,6 +22,6 @@ A clean, professional CV/Resume template in LaTeX with both English and Chinese 
 2. Place your profile photo in the `images` folder
 3. Compile using XeLaTeX:
    ```bash
-   xelatex resume_en.tex  # For English version
-   xelatex resume_zh.tex  # For Chinese version
+   xelatex cv_chinese.tex  # For English version
+   xelatex cv_english.tex  # For Chinese version
    ```

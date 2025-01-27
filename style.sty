@@ -1,0 +1,85 @@
+\ProvidesPackage{style}[2025/01/18 Custom CV Style]
+
+\usepackage{xeCJK}   % For Chinese text with XeLaTeX
+\usepackage{fontspec}     % Select system fonts
+\usepackage{xcolor}
+\usepackage{graphicx}     % For images
+\usepackage{geometry}     % For margins
+\usepackage{hyperref}     % For clickable links
+\geometry{
+  margin=1in,
+  headheight=0pt,
+  headsep=0pt,
+  footskip=0.5in
+}
+\setmainfont{Times New Roman}
+\setCJKmainfont[AutoFakeBold=2.5,AutoFakeSlant=0.2]{Songti SC}
+
+% -----------------------------
+% Personal Info Commands
+% -----------------------------
+\newcommand{\NameCN}[1]{\def\MyNameCN{#1}}
+\newcommand{\NameEN}[1]{\def\MyNameEN{#1}}
+\newcommand{\Email}[1]{\def\MyEmail{#1}}
+\newcommand{\Phone}[1]{\def\MyPhone{#1}}
+\newcommand{\Website}[1]{\def\MyWebsite{#1}}
+\newcommand{\Blog}[1]{\def\MyBlog{#1}}
+\newcommand{\GitHub}[1]{\def\MyGitHub{#1}}
+
+% -----------------------------
+% Section Heading Command
+%   - Adds a horizontal rule under the heading
+% -----------------------------
+\newcommand{\CVSection}[1]{%
+  \section*{#1}%
+  \hrule
+  \vspace{0.8em}
+}
+
+% -----------------------------
+% Common Entry Commands
+% -----------------------------
+\newcommand{\EducationEntryCN}[4]{%
+  \noindent
+  {\large\textbf{#1}} \hfill #2 \\
+  #3 \\
+  \textbf{主修:} #4 \vspace{1em} 
+}
+
+\newcommand{\EducationEntryEN}[4]{%
+  \noindent
+  {\large\textbf{#1}} \hfill #2 \\
+  #3 \\
+  \emph{Major:} #4 \vspace{1em} 
+}
+
+\newcommand{\PublicationEntry}[3]{%
+  \noindent
+  {\large\textbf{#1}}, \emph{#2}, #3
+  \vspace{1em}
+}
+
+\newcommand{\ExperienceEntryCN}[4]{%
+  \noindent
+  {\large\textbf{#1}} \hfill #2 \\
+  \textbf{职位:} #3 \\
+  \textbf{内容:} #4 \vspace{1em}
+}
+
+\newcommand{\ExperienceEntryEN}[4]{%
+  \noindent
+  {\large\textbf{#1}} \hfill #2 \\
+  \emph{Position:} #3 \\
+  \emph{Content:} #4 \vspace{1em}
+}
+
+% -----------------------------
+% (Optional) Default Personal Info
+% -----------------------------
+\NameCN{汤达淏}
+\NameEN{Dahao Tang}
+\Email{dahao.tang@sydney.edu.au; dahaotang@outlook.com}
+\Phone{(+86) 13337706979; (+61) 0416631588}
+\Website{https://dahaotang.com/}
+\Blog{https://blog.dahaotang.com/}
+\GitHub{https://github.com/DahaoTang/}

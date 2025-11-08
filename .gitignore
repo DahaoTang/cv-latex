@@ -1,5 +1,7 @@
 .DS_Store
-*.aux
-*.log
-*.out
-*.gz
+cv_chinese.*
+cv_english.*
+!cv_chinese.pdf
+!cv_english.pdf
+!cv_chinese.tex
+!cv_english.tex
